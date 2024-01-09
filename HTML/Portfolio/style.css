@@ -1,0 +1,15 @@
+:root{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    --page-color: lightblue;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+}
