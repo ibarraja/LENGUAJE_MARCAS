@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE listaventas [
+    <!ELEMENT listaventas   (venta)+ >
+    <!ELEMENT venta         (importe , comprador , vendedor , fecha? , codigoFactura)>
+    <!ELEMENT importe       (#PCDATA)>
+    <!ELEMENT comprador     ((cif, nombre)|(nif,nombre))>
+    <!ELEMENT vendedor      (empresa | persona)>
+    <!ELEMENT empresa       (cif, nombre)>
+    <!ELEMENT persona       (nif, nombre)>
+    <!ELEMENT cif           (#PCDATA)>
+    <!ELEMENT nif           (#PCDATA)>
+    <!ELEMENT nombre        (#PCDATA)>
+    <!ELEMENT fecha         (#PCDATA)>
+    <!ELEMENT codigoFactura (#PCDATA)>
+]>
+<listaventas>
+    <venta>
+        <importe>15</importe>
+        <comprador>
+            <cif>1</cif>
+            <nombre>Juan S.L.</nombre>
+        </comprador>
+        <vendedor>
+            <empresa>
+                <cif>2</cif>
+                <nombre>Pedro S.L.</nombre>
+            </empresa>
+        </vendedor>
+        <fecha>17-12-2022</fecha>
+        <codigoFactura>15a</codigoFactura>
+    </venta>
+    <venta>
+        <importe>15</importe>
+        <comprador>
+            <nif>3</nif>
+            <nombre>Julián</nombre>
+        </comprador>
+        <vendedor>
+        <persona>
+            <nif>2</nif>
+            <nombre>Pedro</nombre>
+        </persona>
+        </vendedor>
+        <codigoFactura>15a</codigoFactura>
+    </venta>
+</listaventas>
