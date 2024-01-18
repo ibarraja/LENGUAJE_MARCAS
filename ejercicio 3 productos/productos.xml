@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE productos [
+    <!ELEMENT productos     (producto)+ >
+    <!ELEMENT producto      (raton | teclado | monitor)+ >
+    <!ELEMENT raton         (codigo, nombre?, descripcion?) >
+    <!ELEMENT codigo        (#PCDATA)>
+    <!ELEMENT nombre        (#PCDATA)>
+    <!ELEMENT descripcion   (#PCDATA)>
+    <!ELEMENT teclado       (codigo, nombre?, descripcion?)>
+    <!ELEMENT monitor       (codigo, nombre?, descripcion?) >
+
+]>
+<productos>
+    <producto>
+        <raton>
+            <codigo>27A</codigo>
+            <nombre>Logitech G502 HERO</nombre>
+        </raton>
+    </producto>
+    <producto>
+        <teclado>
+            <codigo>28D</codigo>
+            <descripcion>Teclado inalamb.</descripcion>
+        </teclado>
+    </producto>
+</productos>
