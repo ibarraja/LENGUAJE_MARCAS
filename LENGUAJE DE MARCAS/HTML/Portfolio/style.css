@@ -1,0 +1,111 @@
+:root{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    --page-color: lightblue;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    & header{
+        justify-content: center;
+        text-align: center;
+
+        & .nombre{
+            text-transform: capitalize;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        & .profesion{
+            text-transform: 0.8rem;
+        }
+    }
+
+}
+
+
+main{
+    flex-grow: 1;
+    display: grid;
+    grid-template-areas: 
+    "experiencia    aptitudes"
+    "experiencia    otros"
+    "formacion      idiomas"
+    ;
+    grid-template-columns: 6fr 2fr;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.experiencia {
+    margin-top: 2rem;
+    grid-area: experiencia;
+    display: flex;
+    flex-direction: column;
+
+    & table{
+        flex-grow: 1;
+    }
+    /* background: red; */
+}
+
+.aptitudes {
+    margin-top: 2rem;
+    grid-area: aptitudes;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    & p{
+        padding-top: 15px;
+    }
+    /* background: cyan; */
+}
+
+.formacion{
+    margin-top: 2rem;
+    grid-area: formacion;
+}
+.title{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    
+}
+
+.fecha{
+    /* text-align: center; */
+    column-span: 2;
+    text-transform: capitalize;
+    color: rgb(53, 53, 53);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.descripcion{
+    column-span: 2;
+}
+
+.file{
+    padding-top: 2rem;
+}
+
+.otros{
+    grid-area: otros;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.idiomas{
+    margin-top: 2rem;
+    grid-area: idiomas;
+}
+
+
+
